@@ -5,7 +5,7 @@ _This project is to be done in teams of 2._
 **NAME OF BOTH COLLABORATOR(S) HERE**
 
 **THE MASTERWORK YOU DREW FROM THE HAT:**
-
+PIXMOB
 ---
 
 One way to understand greatness is to look to the greats. Just as painters learn
@@ -120,8 +120,12 @@ and the people around it. If you're new to storyboarding, read
 **Include pictures of your storyboards here.**
 * Fireflies can be a natural analogy for PixMob. One firefly begins to glow, nearby fireflies respond, and eventually the whole group lights up together, showing how individual light sources can create a larger synchronized pattern.
 <img width="1441" height="1080" alt="4c16c0439e8c9faf33bc11e5fe5c1b8b" src="https://github.com/user-attachments/assets/301bf946-4224-4feb-8391-28404aebe2c4" />
-* This represents collective synchronization through a stadium wave. One person starts the action, nearby audience members follow, and the movement spreads across the crowd, similar to how PixMob coordinates many individual participants into one large visual effect.
-<img width="2181" height="1080" alt="d0283bd5196d888f2bfff30f5323c32a" src="https://github.com/user-attachments/assets/956c9133-7daa-4109-a0f6-d19b32fc6ea6" />
+* This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower.
+<img width="2732" height="2048" alt="IMG_1509" src="https://github.com/user-attachments/assets/c6ece196-f98e-4ba0-b142-818b122650e8" />
+
+https://github.com/user-attachments/assets/65d8e07d-6814-4399-ad17-3fa527567620
+
+
 * This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response.
 <img width="1927" height="1080" alt="7f4e30ae50a0f965847523bb0530786e" src="https://github.com/user-attachments/assets/01286396-a318-48ba-a795-b4fbf9d09faf" />
 
