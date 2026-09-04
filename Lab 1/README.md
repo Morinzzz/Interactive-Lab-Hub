@@ -173,6 +173,9 @@ video feed of whichever scene you want to capture.)
 **Include your first attempts at recording the wizarded set-up here.**
 
 
+https://github.com/user-attachments/assets/03976056-5e32-4073-95fa-d95c14ae2321
+
+
 
 
 ## Part E. (optional) Costume the Device
@@ -197,7 +200,7 @@ who doesn't should come away understanding what it's famous for. How might you i
 
 **Include your video here.**
 
-
+https://github.com/user-attachments/assets/08e93850-d524-4810-b6d8-18542d05d8e5
 
 
 **Please indicate who you collaborated with on this lab.** Be generous in
