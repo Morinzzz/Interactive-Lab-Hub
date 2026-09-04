@@ -142,10 +142,16 @@ https://github.com/user-attachments/assets/cb509a99-f9cf-41fa-af99-5fbcfbab66f8
 
 **Are there things that seemed better on paper than when acted out?**
 
+When we tried acting it out, a few things that looked good on paper didn’t quite land the same way. The biggest one was trying to show those hand movements that go with the music, the kind of waving and gesturing people do at a concert that makes the lights flash in time. With just a regular flashlight and us waving our hands around, it was hard to get that connection across. The rhythm and energy we had pictured felt a lot flatter and less natural than how we imagined it in the storyboard.
+
 **Did new ideas about the piece surface once you were on your feet?**
+
+Once we got on our feet and started acting it out, a few new ideas came up that we hadn’t fully thought through before. We realized we could add music to the scene and change how quickly the light flashes to better match the energy of the moment. That helped sell the feeling we were going for. We also started playing with color more intentionally, using cooler tones for slower or calmer songs and warmer, brighter tones for faster or more upbeat tracks like rock or pop. It made the whole interaction feel clearer and more connected to what the audience would actually experience.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+
+Our storyboards were showing a lot of different ideas, but they didn’t really capture the heart of the device. The core of PixMob is how the entire crowd’s lights are controlled together so they stay perfectly in sync with the music and amplify the collective mood of the show. Once we noticed that, we adjusted the storyboards to focus more on the overall light changes timed to the music and the way the audience moves and reacts while wearing the wristbands. That made the interaction feel closer to what actually happens at a real concert.
 
 ## Part C. Prototype the Light (light first!)
 
