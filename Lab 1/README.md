@@ -123,9 +123,6 @@ and the people around it. If you're new to storyboarding, read
 * This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower.
 <img width="2732" height="2048" alt="IMG_1509" src="https://github.com/user-attachments/assets/c6ece196-f98e-4ba0-b142-818b122650e8" />
 
-https://github.com/user-attachments/assets/65d8e07d-6814-4399-ad17-3fa527567620
-
-
 * This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response.
 <img width="1927" height="1080" alt="7f4e30ae50a0f965847523bb0530786e" src="https://github.com/user-attachments/assets/01286396-a318-48ba-a795-b4fbf9d09faf" />
 
@@ -138,6 +135,10 @@ Use the storyboards to decide what interaction to prototype.
 Physically act out the interaction you planned. For now, just pretend the light
 is doing what you've scripted — a person can wave a flashlight, or you can narrate
 it aloud.
+
+
+https://github.com/user-attachments/assets/cb509a99-f9cf-41fa-af99-5fbcfbab66f8
+
 
 **Are there things that seemed better on paper than when acted out?**
 
@@ -171,6 +172,9 @@ video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
 
+
+
+
 ## Part E. (optional) Costume the Device
 
 Only now should you worry about what the device looks like. Costume your phone so it reads
@@ -192,6 +196,9 @@ the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
 **Include your video here.**
+
+
+
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
