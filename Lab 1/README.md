@@ -7,12 +7,12 @@ Feiyu (Morin) Zhou
 
 **THE MASTERWORK YOU DREW FROM THE HAT:**
 PIXMOB
----
+---  
 
 One way to understand greatness is to look to the greats. Just as painters learn
 the technique and artistry of the old masters by recreating their paintings, so
 too shall we come to understand computer-mediated interaction by recreating the
-interactive masterworks of our time.
+interactive masterworks of our time.  
 
 This week, every team will draw a different masterwork from a hat. Some are
 conceptual pieces, some are historical works, some are modern-day products —
@@ -84,20 +84,20 @@ Before you prototype anything, get intimately acquainted with the piece you
 drew. Do real research. You are looking less for trivia than for the *shape of
 the interaction*:
 
-- What inputs are available to the user? What responses does the work give?
+- What inputs are available to the user? What responses does the work give?  
 Movement and the button on the wristband for the user to click on,two users can also bump their wristbands together.
-The light will flash according to different user movements, press the button to make it work, and bump the wristbands to use NFC to transm media profiles. 
-- Who is present, and how does the piece color the relationships between them?
-Audiences, performers, staff who control the wristbands. Staff control the color to make the audience feel they are connected.
-- What is the piece famous for? What are its strengths and its weaknesses?
-It is famous for its use in massive crowds of people. And it is used in many famous artists’ concerts.
-Strengths: It can create a scale effect, and its cost is low
-Weakness: It can only be used in special events like concerts and football games. And users do not have much control over it.
+The light will flash according to different user movements, press the button to make it work, and bump the wristbands to use NFC to transm media profiles.  
+- Who is present, and how does the piece color the relationships between them?  
+Audiences, performers, staff who control the wristbands. Staff control the color to make the audience feel they are connected.  
+- What is the piece famous for? What are its strengths and its weaknesses?  
+It is famous for its use in massive crowds of people. And it is used in many famous artists’ concerts.  
+Strengths: It can create a scale effect, and its cost is low.  
+Weakness: It can only be used in special events like concerts and football games. And users do not have much control over it.  
 
  Sometimes the details of how the interaction worked are lost in history. Try filling it in with your imagination!
 
 **Describe your masterwork here, in your own words. What is the core interaction
-someone would recognize it by?**
+someone would recognize it by?**  
 This is a wristband used for large events such as concerts and sport games. The product will be controlled by central technicians to present different light effects. People can also use movements to change its flashes, and use it to exchange social media accounts.
 
 ## Part A. Plan
@@ -119,12 +119,12 @@ and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
 **Include pictures of your storyboards here.**
-* Fireflies can be a natural analogy for PixMob. One firefly begins to glow, nearby fireflies respond, and eventually the whole group lights up together, showing how individual light sources can create a larger synchronized pattern.
+* Fireflies can be a natural analogy for PixMob. One firefly begins to glow, nearby fireflies respond, and eventually the whole group lights up together, showing how individual light sources can create a larger synchronized pattern. *
 <img width="1441" height="1080" alt="4c16c0439e8c9faf33bc11e5fe5c1b8b" src="https://github.com/user-attachments/assets/301bf946-4224-4feb-8391-28404aebe2c4" />
-* This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower.
+* This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower. *
 <img width="2732" height="2048" alt="IMG_1509" src="https://github.com/user-attachments/assets/c6ece196-f98e-4ba0-b142-818b122650e8" />
 
-* This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response.
+* This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response. *
 <img width="1927" height="1080" alt="7f4e30ae50a0f965847523bb0530786e" src="https://github.com/user-attachments/assets/01286396-a318-48ba-a795-b4fbf9d09faf" />
 
 Use the storyboards to decide what interaction to prototype.
