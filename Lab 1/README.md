@@ -119,12 +119,12 @@ and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
 **Include pictures of your storyboards here.**
-* Fireflies can be a natural analogy for PixMob. One firefly begins to glow, nearby fireflies respond, and eventually the whole group lights up together, showing how individual light sources can create a larger synchronized pattern. *
+* Fireflies can be a natural analogy for PixMob. One firefly begins to glow, nearby fireflies respond, and eventually the whole group lights up together, showing how individual light sources can create a larger synchronized pattern.
 <img width="1441" height="1080" alt="4c16c0439e8c9faf33bc11e5fe5c1b8b" src="https://github.com/user-attachments/assets/301bf946-4224-4feb-8391-28404aebe2c4" />
-* This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower. *
+* This represents collective synchronization through a Potluck concert. One artist has intense movement and a fast beat; the audience's central control glow stick will have a very vibrant color and flash rapidly. When a lyrical song is performed, the color will turn calm and changes slower.
 <img width="2732" height="2048" alt="IMG_1509" src="https://github.com/user-attachments/assets/c6ece196-f98e-4ba0-b142-818b122650e8" />
 
-* This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response. *
+* This applies the same interaction principle to a security scenario. When one exhibit is disturbed, multiple alarms and warning lights are activated, turning a local event into a coordinated system-wide response.
 <img width="1927" height="1080" alt="7f4e30ae50a0f965847523bb0530786e" src="https://github.com/user-attachments/assets/01286396-a318-48ba-a795-b4fbf9d09faf" />
 
 Use the storyboards to decide what interaction to prototype.
