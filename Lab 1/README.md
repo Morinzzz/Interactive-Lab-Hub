@@ -131,6 +131,8 @@ Use the storyboards to decide what interaction to prototype.
 
 **Summarize the feedback you got here.**
 
+People really liked the firefly idea because it showed how one light can start a chain reaction and light up the whole group. The concert storyboard felt closest to real PixMob since the lights sped up and changed color with the music, which made the interaction easy to recognize. A few people said the security alarm version was creative but felt too far from the original, so they suggested we focus more on the crowd moving together and staying in sync with the music.
+
 ## Part B. Act out the Interaction
 
 Physically act out the interaction you planned. For now, just pretend the light
