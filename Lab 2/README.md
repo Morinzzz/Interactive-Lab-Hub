@@ -66,6 +66,8 @@ pi@raspberrypi:~ $ source venv/bin/activate
 (venv) pi@raspberrypi:~ $ 
 
 ```
+<img width="1020" height="122" alt="image" src="https://github.com/user-attachments/assets/f4515530-14c0-4550-9684-14240db3a96d" />
+
 ### Setup Personal Access Tokens on GitHub
 Set your git name and email so that commits appear under your name.
 ```
