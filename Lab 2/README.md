@@ -254,7 +254,7 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.  
 
-Disclaimer: I used ChatGPT to look up the design capabiliy of Raspberry Pi. And I guarantee my design is fully original.
+Disclaimer: I used ChatGPT to look up the design capabiliy of Raspberry Pi. And I guarantee my design is based on my original ideas.
 <img width="1646" height="956" alt="image" src="https://github.com/user-attachments/assets/4c1b1e00-dd12-4955-993b-99b93a5e7205" />
 
 
