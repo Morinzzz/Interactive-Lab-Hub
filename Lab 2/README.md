@@ -252,7 +252,11 @@ Do take advantage of having done the previous iteration to refine and simplify y
 \*\*\***Take a video of your PiClock.**\*\*\*
 
 
-As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
+As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.  
+
+Disclaimer: I used ChatGPT to look up the design capabiliy of Raspberry Pi. And I guarantee my design is fully original.
+<img width="1646" height="956" alt="image" src="https://github.com/user-attachments/assets/4c1b1e00-dd12-4955-993b-99b93a5e7205" />
+
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab.  Make sure the page for the group turn in is linked to your personal Interactive Lab Hub page. 
 
