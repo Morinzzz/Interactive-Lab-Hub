@@ -142,6 +142,7 @@ Line up the screen and press it on the headers. The hole in the screen should ma
 The display uses a communication protocol called [SPI](https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/) to speak with the raspberry pi. We won't go in depth in this course over how SPI works. The port on the bottom of the display connects to the SDA and SCL pins used for the I2C communication protocol which we will cover later. GPIO (General Purpose Input/Output) pins 23 and 24 are connected to the two buttons on the left. GPIO 22 controls the display backlight.
 
 To show you the IP and Mac address of the Pi to allow connecting remotely we created a service that launches a python script that runs on boot. For the following steps stop the service by typing ``` sudo systemctl stop piscreen.service --now```. Othwerise two scripts will try to use the screen at once. You may start it again by typing ``` sudo systemctl start piscreen.service --now```
+<img width="2275" height="1280" alt="0bd0443558aa54637f7f0af1b47b7e38" src="https://github.com/user-attachments/assets/7f127a01-6425-4836-9f25-9ad25bc3907e" />
 
 We can test it by typing 
 ```
