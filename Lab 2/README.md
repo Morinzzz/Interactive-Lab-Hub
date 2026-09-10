@@ -98,6 +98,7 @@ create_img.sh  Downloads            pi-apps   screen_boot_script.py  Videos
 Desktop        Interactive-Lab-Hub  Pictures  Templates
 (venv) pi@raspberrypi:~ $
 ```
+<img width="1209" height="285" alt="image" src="https://github.com/user-attachments/assets/a3a7283b-b2a4-4150-99e9-53f006773fe3" />
 
 
 Install the packages from the requirements.txt and run the example script `cli_clock.py`:
@@ -110,6 +111,7 @@ Install the packages from the requirements.txt and run the example script `cli_c
 
 The terminal should show the time, you can press `ctrl-c` to exit the script.
 If you are unfamiliar with the Python code in `cli_clock.py`, have a look at [this Python refresher](https://hackernoon.com/intermediate-python-refresher-tutorial-project-ideas-and-tips-i28s320p). If you are still concerned, please reach out to the teaching staff!
+<img width="1188" height="125" alt="image" src="https://github.com/user-attachments/assets/7d612453-b676-4101-a5c1-987da53aa8fd" />
 
 
 ## Part C. 
@@ -145,6 +147,10 @@ We can test it by typing
 ```
 (venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python screen_test.py
 ```
+<img width="999" height="108" alt="image" src="https://github.com/user-attachments/assets/f8aaeab7-721f-4b09-af6a-43cb4bd0a51f" />
+<img width="2275" height="1280" alt="c393f1c617eecdd5404729ee444d7f97" src="https://github.com/user-attachments/assets/feec41a7-a8b3-42e9-887f-51da85aef057" />
+<img width="2275" height="1280" alt="0f8dde13236689d257e96e9b227c6ccb" src="https://github.com/user-attachments/assets/b5278128-2f2f-4407-8f59-c888350dee0d" />
+<img width="2275" height="1280" alt="4ccb1eb79082aae13fbe3fe13a89594d" src="https://github.com/user-attachments/assets/9a57a8b3-c189-4be6-9b49-5cd3e46c5c14" />
 
 You can type the name of a color then press either of the buttons on the MiniPiTFT to see what happens on the display! You can press `ctrl-c` to exit the script. Take a look at the code with
 ```
