@@ -240,7 +240,7 @@ Feedback from group 2 https://github.com/Gtpatel02/Interactive-Lab-Hub:
 
 I liked the video overall and thought the light effects were interesting to watch. At the same time, it might still be a little confusing for someone seeing it for the first time. Without more context it can be hard to tell exactly what you’re trying to convey with the interaction, especially if the viewer isn’t already familiar with the original idea behind it. Adding a bit more framing or showing the scene more clearly could help the main point come across more easily.
 
-Feedback from group 3 :
+Feedback from group 3 https://github.com/manrongm/Interactive-Lab-Hub/tree/Fall2026/Lab%201:
 
 We watched your video and thought the light looked pretty cool, especially when it changed with the music. It seemed like you were trying to show a crowd at a concert all lighting up together. We’re guessing the masterwork is something like those LED wristbands that sync up during big shows. One thing that wasn’t totally clear to us was who was controlling the light and whether the people waving it around were supposed to be the audience or the performers. It might help if the roles were a bit more obvious.
 
