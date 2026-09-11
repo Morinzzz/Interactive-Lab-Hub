@@ -255,6 +255,7 @@ We will grade this second pass with an emphasis on **creativity** and on how wel
 your response engages with what your master was really doing.
 
 Final Video: https://drive.google.com/file/d/1tx2DvNTfWbs5gHDhrs_-izJNxDe0ntrQ/view?usp=sharing
+
 References to the music we used: https://www.youtube.com/watch?v=2u_kncwzJ5Y and https://www.youtube.com/watch?v=SXM1q0CTfew
 
 **Document everything here — especially the storyboard and video. Photos of the
