@@ -232,6 +232,10 @@ wasn't clear.
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 **Summarize the feedback you got from your partners here.**
 
+Feedback from group 1 https://github.com/Nishant-Ray/Interactive-Lab-Hub:
+
+I was a bit confused about what was happening in the video at first. It looked like some kind of light show paired with dance music, but I wasn’t completely sure what the overall scene was supposed to be. The way the light was being waved around felt familiar though, almost like how fans hold up phone lights or glow sticks at concerts to match the energy of the performance. That part made sense to me even if the rest of the interaction was a little hard to follow.
+
 ## Remix, Update, or Critique the Master
 
 Now that you understand your masterwork from the inside, respond to it. Do the
