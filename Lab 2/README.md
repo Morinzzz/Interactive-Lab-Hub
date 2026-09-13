@@ -209,7 +209,6 @@ A little chick moves at a constant speed along the bottom of the screen. It walk
 Focus Mode (Button A): Press once to start a 30-minute Pomodoro timer; the chick puts on glasses and reads. Press again to exit.
 Check Time (Button B): Press and hold to display the time in large digits; release to return to the main screen.
 
-Translated with DeepL.com (free version)
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
 
@@ -217,9 +216,9 @@ Translated with DeepL.com (free version)
 
 I-Clock is more than just a clock that tells the time out loud. It has its own personality, which changes throughout the day. In the morning, it might sound energetic and cheerful, while late at night, it becomes drowsy, slow, and ready for bed.
 
-When the **A button** is pressed, I-Clock announces the current time and follows it with a short message that matches the time of day. These messages vary so that the clock does not repeat the same response every time. For example, early in the morning it might say something like, “Good morning!” in a bright, upbeat voice, while late at night it may sound sleepy and ready to go to bed.
+When the A button is pressed, I-Clock announces the current time and follows it with a short message that matches the time of day. These messages vary so that the clock does not repeat the same response every time. For example, early in the morning it might say something like, “Good morning!” in a bright, upbeat voice, while late at night it may sound sleepy and ready to go to bed.
 
-The **B button** can be used to repeat the most recent time and message. Pressing the **A and B buttons together** allows the user to switch between different moods and personalities.
+The B button can be used to repeat the most recent time and message. Pressing the A and B buttons together allows the user to switch between different moods and personalities.
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
