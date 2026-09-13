@@ -202,6 +202,7 @@ One potential source of ideas might be thinking about other clocks and timekeepi
 Another might be novel units of time. How do you measure a year? [In daylights? In midnights? In cups of coffee?](https://www.youtube.com/watch?v=wsj15wPpjLY)
 
 We strongly discourage literal digital or analog clock display: Be creative.
+<img width="1596" height="1079" alt="4e0680ce17ce036ef14b1f00c3198724" src="https://github.com/user-attachments/assets/5659e3c3-bd13-479e-a78a-7898fa472c3c" />
 
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
