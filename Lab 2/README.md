@@ -226,6 +226,12 @@ Collaborators: Manrong Mao(mm3599), Wenqing Pan(wp273)
 https://github.com/manrongm/Interactive-Lab-Hub/tree/mm3599-lab2a/Lab%202  
 I liked how your clock idea gives time a visual personality instead of only showing numbers. The egg and chick concept makes the passage of time feel more playful, especially because the chick moves back and forth to represent each minute. I also think the day-and-night background and pajama change make the clock feel connected to the user’s daily routine. The Focus Mode is also useful because the same device can become a Pomodoro timer when the user presses Button A. The I-Clock idea adds another interesting layer because the clock changes its voice and mood depending on the time of day. One thing I would still like to know is how the different visual and voice features will work together without making the screen or interaction feel too busy.
 
+Feedback from https://github.com/Youssef-Chip/Interactive-Lab-Hub/blob/Fall2026/Lab%202/README.md:
+
+I think the “Egg” is a very creative way to make a clock that measures a year and I really like the story that you gave to your character. However I do think if it weren’t for the text below your storyboard, I would’ve been a bit confused about how you were gonna make the clock measure a year. Additionally, I really love the Pomodoro timer option that you introduced, I think it’s a very useful feature that I would definitely use.
+
+I think your storyboard for your second clock idea is much clearer and I was able to understand how the clock works. My only feedback is that I would prefer to use your first clock just because the idea that the clock can speak might creep me out sometimes.
+
 # Lab 2 Part 2
 
 ## Prep 
