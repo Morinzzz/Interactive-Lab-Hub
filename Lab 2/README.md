@@ -232,6 +232,10 @@ I think the “Egg” is a very creative way to make a clock that measures a yea
 
 I think your storyboard for your second clock idea is much clearer and I was able to understand how the clock works. My only feedback is that I would prefer to use your first clock just because the idea that the clock can speak might creep me out sometimes.
 
+Feedback from https://github.com/Afrozaktar/Interactive-Lab-Hub/tree/Fall2026/Lab%202:
+
+I actually really like the egg idea, especially the part where you can set a 30-minute timer and the chicken puts on the glasses. I think it is a really nice way to force you to study and stay focused.I was a little confused by the first storyboard at first. I could see that there were a lot of cool features, but I wasn’t exactly sure what each feature was supposed to do until I read the storyboard description below. I think the second storyboard is much clearer because I understood the interaction right away, and from the demo, it worked exactly as the storyboard described. The only thing I would change is the random quote on the clock. I think it would be more interesting if the message were related to the time of day. For example, in the morning it could say something like “Time for breakfast!” rather than showing a random quote. That could make the clock feel more connected to the user’s daily routine.
+
 # Lab 2 Part 2
 
 ## Prep 
