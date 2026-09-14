@@ -224,6 +224,7 @@ The B button can be used to repeat the most recent time and message. Pressing th
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
 Collaborators: Manrong Mao(mm3599), Wenqing Pan(wp273)
 https://github.com/manrongm/Interactive-Lab-Hub/tree/mm3599-lab2a/Lab%202
+I liked how your clock idea gives time a visual personality instead of only showing numbers. The egg and chick concept makes the passage of time feel more playful, especially because the chick moves back and forth to represent each minute. I also think the day-and-night background and pajama change make the clock feel connected to the user’s daily routine. The Focus Mode is also useful because the same device can become a Pomodoro timer when the user presses Button A. The I-Clock idea adds another interesting layer because the clock changes its voice and mood depending on the time of day. One thing I would still like to know is how the different visual and voice features will work together without making the screen or interaction feel too busy.
 
 # Lab 2 Part 2
 
