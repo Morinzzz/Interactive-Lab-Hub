@@ -259,6 +259,8 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
+Link to my version of barely modified PiClock: https://drive.google.com/file/d/1NXdWF6a8x4kc7Tw7Xygdhdo_b5ww3H2q/view?usp=sharing
+
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
 ```
