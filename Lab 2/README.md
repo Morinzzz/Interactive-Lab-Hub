@@ -282,6 +282,15 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+Video of my finished PiClock: https://drive.google.com/file/d/1DdapGa5ptk78G6kTJc_Fss_N8z1Q0pIL/view?usp=sharing
+
+I-Clock is more than a simple talking clock. In addition to announcing the current time, it has its own personality that changes depending on the time of day. In the morning, it may sound cheerful and energetic, while late at night, its voice becomes slower, sleepier, and more ready for bed.
+
+When the A button is pressed, I-Clock announces the current time and then gives a short message that matches that specific time of day. After receiving feedback, I improved this feature by using a free LLM API to generate messages that are more relevant to the current time. Instead of relying on a small set of pre-written responses, the clock can now generate a new message each time the button is pressed. This makes the interactions feel more natural and helps prevent the responses from becoming repetitive. For example, in the early morning, I-Clock might give an upbeat greeting to help start the day, while late at night, it may respond with a more relaxed or sleepy message.
+
+The B button allows the user to repeat the most recent time announcement and message. Pressing the A and B buttons at the same time lets the user switch between different moods and personalities, giving I-Clock an additional level of customization and interaction.
+
+The idea is entirely my own, but LLM is used to help with the implementation of the clock and debugging.
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.  
 
