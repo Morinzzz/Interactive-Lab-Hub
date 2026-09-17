@@ -11,8 +11,26 @@ months.
 """
 
 import argparse
+import sys
 from datetime import datetime
+from pathlib import Path
 from typing import List, Tuple
+
+_HERE = Path(__file__).resolve().parent
+
+
+def _find_lab2(start: Path) -> Path:
+    for path in (start, start.parent, start.parent / "Lab 2"):
+        if (path / "cli_clock.py").is_file() or (path / "requirements.txt").is_file():
+            return path
+    return start
+
+
+_LAB2 = _find_lab2(_HERE)
+for _path in (_HERE, _LAB2):
+    _s = str(_path)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
 from PIL import Image
 

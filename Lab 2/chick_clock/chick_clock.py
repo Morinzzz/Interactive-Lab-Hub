@@ -13,14 +13,36 @@ Controls
 
 Run `sudo systemctl stop piscreen.service --now` first, otherwise the boot
 script is already holding the display.
+
+This package lives under Lab 2/chick_clock/.  Sibling chick_* modules and
+the rest of Lab 2 (except iclock/) are both on sys.path.
 """
 
 import argparse
 import subprocess
+import sys
 import time
 from dataclasses import dataclass
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
+
+# This folder for chick_* modules; parent Lab 2/ for shared lab scripts.
+_HERE = Path(__file__).resolve().parent
+
+
+def _find_lab2(start: Path) -> Path:
+    for path in (start, start.parent, start.parent / "Lab 2"):
+        if (path / "cli_clock.py").is_file() or (path / "requirements.txt").is_file():
+            return path
+    return start
+
+
+_LAB2 = _find_lab2(_HERE)
+for _path in (_HERE, _LAB2):
+    _s = str(_path)
+    if _s not in sys.path:
+        sys.path.insert(0, _s)
 
 import adafruit_rgb_display.st7789 as st7789
 import board
