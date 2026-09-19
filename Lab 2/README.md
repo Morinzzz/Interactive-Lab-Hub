@@ -290,11 +290,18 @@ When the A button is pressed, I-Clock announces the current time and then gives 
 
 The B button allows the user to repeat the most recent time announcement and message. Pressing the A and B buttons at the same time lets the user switch between different moods and personalities, giving I-Clock an additional level of customization and interaction.
 
-The idea is entirely my own, but LLM is used to help with the implementation of the clock and debugging.
+The idea is entirely my own, but LLM is used to help with the implementation of the clock and debugging.  
 
-As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.  
+Video of Chick Clock: https://drive.google.com/file/d/1gunFrKUVHmzoLiF5AXv3eXD-Hc31A1sf/view?usp=drivesdk  
 
-Disclaimer: I used ChatGPT to look up the design capabiliy of Raspberry Pi. And I guarantee my design is based on my original ideas.
+Instead of only showing the time, Chick Clock turns the day and the school year into a small chick on the screen. The chick walks one full trip across the grass every minute, the sky changes with the hour, and the chick itself grows from an egg at the start of the year into later stages as the months pass. Late at night it looks sleepy; during the day it is awake and moving.  
+
+When the A button is pressed, the chick starts a 30-minute focus timer. It puts on glasses, sits with a book, and a countdown appears on the screen. Pressing A again stops the timer. After receiving feedback that the time mapping was hard to read, I made the clock itself clearer: the chick still walks the minute, a short chirp marks each new minute, and on the hour the clock strikes. Eight in the morning and eight at night both ring eight times, and the screen shows the time as 8:00 AM or 8:00 PM so the hour is easy to tell apart.  
+
+A short press on B asks for the current hour the same way. Holding B shows the exact time, the date, and how far the school year has come. Pressing A and B at the same time steps through a preview of the day and each growth stage, so the different times and months can be shown without waiting for them to happen.  
+
+
+Disclaimer: I used ChatGPT to look up the design capability of Raspberry Pi. And Cursor for the project development. And I guarantee my design is based on my original ideas.
 <img width="1646" height="956" alt="image" src="https://github.com/user-attachments/assets/4c1b1e00-dd12-4955-993b-99b93a5e7205" />
 
 
