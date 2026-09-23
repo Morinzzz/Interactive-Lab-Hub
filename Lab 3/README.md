@@ -2,6 +2,8 @@
 
 **NAMES OF COLLABORATORS HERE**
 
+Feiyu (Morin) Zhou and Sirapop Umnakkittikul
+
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
 In this lab, we want you to design interaction with a speech-enabled device — something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1). First, we want you to storyboard what you imagine the conversational interaction to be like. Then you will use wizarding techniques to elicit examples of what people might say, ask, or respond. We then want you to use the examples collected from at least two other people to inform the redesign of the device.
@@ -109,7 +111,23 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
+Script: [`speech-scripts/greet_morin.sh`](speech-scripts/greet_morin.sh). I used Piper (`en_US-lessac-medium`) with `--output-raw`, so playback starts while the rest of the sentence is still being synthesized.
+
+```bash
+(.venv) $ ./greet_morin.sh
+```
+
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
+
+No. The words can be identical and the greeting still is not the same, because the voice tells you who is speaking and what kind of relationship they are claiming.
+
+Concrete example: I said “Hi Morin. Welcome back.” with all three engines.
+
+- **espeak** (`-ven+f2`) made it sound like a toy or an old GPS. The “welcome back” did not feel warm; it felt like a status message a machine is required to play.
+- **festival** made the same line feel more like a person, but a slightly stiff, older male one. Because we had just heard it say the HAL line about Dave, the greeting picked up some of that “I am watching you” tone even though the words were friendly.
+- **Piper / lessac** sounded like a calm American narrator. “Welcome back” suddenly meant *I know you, you have been here before*, closer to a host than a beep.
+
+So the utterance’s meaning moved with the voice: system prompt vs. slightly ominous attendant vs. someone greeting you at the door. That is why we picked Piper for the greeting script — not only because it sounds better, but because it is the only one that actually felt like a greeting.
 
 ## B. Speech to Text
 
@@ -131,7 +149,29 @@ Available sizes, smallest first: `tiny.en`, `base.en`, `small.en`, `medium.en`. 
 
 \*\***Record a few seconds of your own speech (`arecord -d 5 -f cd -c 1 -r 16000 test.wav`) and transcribe it with at least two model sizes. Report the real-time factor for each. At what point does the accuracy improvement stop being worth the delay, for a system that has to answer you?**\*\*
 
+Recording: `speech-scripts/test.wav` (5 seconds of my own speech).
+
+| Model | Transcript | Audio duration | Transcription time | Real-time factor |
+| --- | --- | --- | --- | --- |
+| `tiny.en` | Hi, this is Morin, I'm an interactive | 5.00s | 1.03s | **0.21x** |
+| `base.en` | Hi, this is Morin. I'm in interactive. | 5.00s | 1.94s | **0.39x** |
+
+Both are faster than real time (`tiny.en` transcribed 5s of audio in 1.03s; `base.en` took 1.94s). Model load is a one-time cost per process (`tiny.en` 0.55s, `base.en` 14.92s on first download). After that, only transcription time matters.
+
+For a system that has to answer you, the accuracy improvement already stopped being worth it at `base.en`. It was almost **2× slower**, and it did not even fix the sentence: `tiny.en` heard “I'm **an** interactive,” `base.en` heard “I'm **in** interactive.” I would ship `tiny.en`, keep the model resident (as `listen.py` does), and design around leftover errors with a confirmation turn instead of waiting on a bigger model. `small.en` / `medium.en` would only add more delay.
+
 \*\***Write your own script that verbally asks for a numerical input (a phone number, zipcode, number of pets) and records the answer the respondent provides.**\*\* Numbers are a good stress test — transcription systems make characteristic errors on digit strings, and you will want to know what they are before you design around them.
+
+Script: [`speech-scripts/ask_number.py`](speech-scripts/ask_number.py)
+
+It uses Piper to ask for a five-digit zip code (you can make one up), records 6 seconds from the webcam mic, saves `zipcode_answer.wav`, and transcribes with faster-whisper.
+
+```bash
+(.venv) $ python ask_number.py
+(.venv) $ python ask_number.py --model base.en
+```
+
+What I am listening for in the transcript: `oh` vs `zero`, missing digits, commas (`10,011` instead of `10011`), or the zip written as words (`nine four one oh three`). Those errors are why a later dialogue should confirm numbers instead of trusting the first transcript.
 
 ## C. Turn-taking: knowing when someone has stopped talking
 
@@ -153,7 +193,21 @@ Speak, pause, and watch it transcribe. Now change the endpointing threshold — 
 
 \*\***Try both extremes, and something in between. Describe what each one feels like to talk to. Note specifically: at 0.2s, what kinds of normal speech get cut off? At 1.5s, what does the delay make the system seem like?**\*\*
 
-There is no correct value. A system that takes drink orders and a system that listens to someone think out loud want very different thresholds, and the right one depends on what your users are doing with their pauses.
+Same intended line each time: *I want a latte, um, actually a cappuccino.* `--min-silence` is turn-taking, not recognition.
+
+**0.2s** — `[4.9s speech, 1.00s to transcribe] I want to say actually a cup of china`
+
+It grabbed the turn the instant I stopped. I did not leave a long enough hole in the middle for it to split the sentence, so it did not cut me into two transcripts — it cut *inside* the words instead. The “um” / “latte” hesitation got eaten, and “cappuccino” became “cup of china.” At 0.2s, the speech that gets cut off is the small stuff in a repair: the filled pause, the word you are about to take back, the switch from first order to second. It feels jumpy, like someone finishing your sentence.
+
+**0.4s (default)** — `[4.6s speech, 0.99s to transcribe] I want to take actually a cup of china`
+
+Almost the same clip length and almost the same wait. It still feels like a short-order window: fine if the line is already in your mouth, still messy if you change your mind mid-sentence. “say” became “take.” This is the usable in-between for a command, not for thinking out loud.
+
+**1.5s** — `[13.8s speech, 1.37s to transcribe] I don't want to let's hear it. Actually, I'll come with Cheena. What time is it?`
+
+This is the one that changed how it *felt*. After I finished, nothing happened, so I kept going and even threw in a second question. The system treated all of that as one turn (13.8s of speech). The delay makes it seem like it did not hear me, or like a laggy phone call — vacant, a little deaf. The failure mode is not cutting you off; it is swallowing the next thing you say while you wait.
+
+No correct value. A drink order wants ~0.4s so it can move after a short pause. Something that lets you think out loud needs closer to a second, or it will either clip the “actually…” or vacuum up “what time is it?” into the same utterance.
 
 ### The complete loop
 
@@ -162,6 +216,8 @@ There is no correct value. A system that takes drink orders and a system that li
 ```
 (.venv) $ python echo_bot.py
 ```
+
+Default 0.4s endpointing. It heard `I want to cover the tape` (still the cappuccino line, even more mangled) and said `You said: I want to cover the tape.` Timing: **asr 1.01s | tts first audio 0.28s | total gap 1.29s**. Piper itself was quick; the dead air was almost all Whisper. Even with a “fast” endpoint, you still wait more than a second before the device talks back — and that gap is what feels like the system thinking.
 
 ## D. Storyboard
 
