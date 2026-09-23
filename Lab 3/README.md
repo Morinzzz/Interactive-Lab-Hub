@@ -111,17 +111,17 @@ The demo script also shows `--output-raw`, which streams audio to the speaker as
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
-Script: [`speech-scripts/greet_morin.sh`](speech-scripts/greet_morin.sh). I used Piper (`en_US-lessac-medium`) with `--output-raw`, so playback starts while the rest of the sentence is still being synthesized.
+Script: [`speech-scripts/greet_morin_mig.sh`](speech-scripts/greet_morin_mig.sh). I used Piper (`en_US-lessac-medium`) with `--output-raw`, so playback starts while the rest of the sentence is still being synthesized.
 
 ```bash
-(.venv) $ ./greet_morin.sh
+(.venv) $ ./greet_morin_mig.sh
 ```
 
 \*\***Then answer: Is the same greeting, in these different voices, the same greeting? Describe one concrete way the voice changed what the utterance seemed to mean or who seemed to be speaking.**\*\*
 
 No. The words can be identical and the greeting still is not the same, because the voice tells you who is speaking and what kind of relationship they are claiming.
 
-Concrete example: I said “Hi Morin. Welcome back.” with all three engines.
+Concrete example: I said “Hi Morin and Mig. Welcome back.” with all three engines.
 
 - **espeak** (`-ven+f2`) made it sound like a toy or an old GPS. The “welcome back” did not feel warm; it felt like a status message a machine is required to play.
 - **festival** made the same line feel more like a person, but a slightly stiff, older male one. Because we had just heard it say the HAL line about Dave, the greeting picked up some of that “I am watching you” tone even though the words were friendly.
