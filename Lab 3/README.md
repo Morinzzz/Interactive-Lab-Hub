@@ -234,9 +234,9 @@ Your script should include the pauses. Where does your device wait, and for how 
 ## E. Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing. Please record this interaction (for example, using Zoom's record feature).
-
-\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
-
+https://drive.google.com/file/d/10y4IMazRkMfGjkTr-8yvMTXaWIficM_O/view?usp=sharing
+\*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*  
+The dialogue was mostly similar to what I imagined. The main difference was that the participant sometimes gave answers that went beyond what I had written in the script. I had planned a few possible responses, but in the actual conversation I had to listen to what they said and decide which question to ask next. This made me realize that the device needs to handle more than a fixed sequence of questions, even when the overall interaction goes as planned.
 
 ---
 
