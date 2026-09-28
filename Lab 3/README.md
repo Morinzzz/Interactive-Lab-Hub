@@ -225,11 +225,36 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+<img width="1699" height="906" alt="image" src="https://github.com/user-attachments/assets/f9f3ad08-f3bf-48f5-8dc1-8bb0bd1049b1" />
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses.
+
+Concept: DoorBuddy. DoorBuddy is a speech device by the front door. When you approach with a bag, it asks where you're going and follows up with a targeted question to catch anything you forgot. Afterward, it asks if there's anything new to remember next time.
+
+Storyboard: The user heads for the door with a bag. DoorBuddy asks, "Where are we going?" The user says they're presenting in class. DoorBuddy asks whether they're using their laptop or the class desktop. The user freezes, realizes the laptop isn't in the bag, and runs back for it. When they return, DoorBuddy asks if there's anything else to remember for next time
 
 \*\***Please describe and document your process.**\*\*
 
 Your script should include the pauses. Where does your device wait, and for how long? You now know from Part C that this is a parameter you have to choose, not something that happens for free.
+
+Script
+[User detected near door → WAIT 0.5 s]
+DEVICE: "Where are we going?"
+[LISTEN up to 6 s | end-of-speech silence: 1.2 s]
+USER:   "To class, I need to present today."
+[WAIT 0.3 s]
+DEVICE: "Are you presenting from your laptop or the class desktop?"
+[LISTEN up to 8 s | end-of-speech silence: 1.5 s]
+USER:   "I forgot!"
+DEVICE: "No problem, I'll wait."
+[WAIT up to 90 s for user to return; if door opens first, end silently]
+[User returns → WAIT 1 s]
+DEVICE: "Anything else you want me to remember for next time?"
+[LISTEN up to 8 s | end-of-speech silence: 2.0 s]
+USER:   "Remind me to bring my charger when I present."
+DEVICE: "Got it. Good luck today!"
+
+Process: I picked a moment when speaking is easier than using a screen: leaving the house in a rush with full hands. I sketched the storyboard, then wrote the dialogue. Next I listed other things the user might say, like "not now" or saying nothing, so the device knows how to respond to each. Last, I chose the wait times: short for easy questions, longer for questions that need more thought.
 
 ## E. Acting out the dialogue
 
