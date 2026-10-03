@@ -277,24 +277,35 @@ Feedback from Part 1 was that DoorBuddy was too slow and said more than it neede
 
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
 
-The screen always shows what DoorBuddy is doing, using text and a background color for each state. It shows when the device is listening, when it is processing what the user said, and when it is speaking. This way the user never has to guess whether the device heard them or whether it is their turn to talk.
+The screen always shows what DoorBuddy is doing, using a short text label and a different background color for each state. It shows when the device is listening, when it is processing what the user said, and when it is speaking. The color can be seen at a glance from across the room, even when the user is busy grabbing their things, and the text makes the meaning clear for someone using it for the first time. This tells the user when it is their turn to talk and when they should wait. Without it, a user might start talking before the device is ready, or stand in silence not knowing whether the device heard them or is still thinking. With the screen, the user never has to guess what the device is doing.
 
 3. Make a new storyboard, diagram and/or script based on these reflections.
 
 The camera sees someone at the door.
+
 Device: Where are you headed?
+
 User: Class, I'm presenting.
+
 Device: Got your laptop?
+
 User: Oh no, I forgot!
+
 Device: I'll wait.
+
 The user comes back.
+
 Device: Anything to remember next time?
+
 User: My charger.
+
 Device: Saved, charger. Good luck!
+
+If the user says nothing or says not now, DoorBuddy says OK, bye and stays quiet.
 
 4. (optional) Integrate [input devices](inputs.md) in the system
 
-We used the webcam in two ways. The camera detects when someone walks up to the door, which starts the conversation without anyone pressing anything. The microphone records what the user says, and the Pi turns the speech into text to decide what to say next.
+We used the webcam as our main input device, in two ways. First, the camera detects when someone walks up to the door, so the conversation starts on its own without the user pressing a button or saying a wake word. This matters because people leaving the house often have their hands full with a bag, keys, or a coffee. Second, the microphone records what the user says. The Pi listens for when the user has finished talking, turns their speech into text, and uses that text to decide what to say next. Together, the camera and microphone make the interaction completely hands free, so the user only has to talk.
 
 ## Prototype your system
 
