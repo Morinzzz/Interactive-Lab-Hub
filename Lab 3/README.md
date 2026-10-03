@@ -318,6 +318,8 @@ The system should:
 
 *Include videos or screencaptures of both the system and the controller.*
 
+https://drive.google.com/file/d/1gcnae5S60KLx6o51oWbBpJiQyQLoRRah/view?usp=sharing
+
 ## Test the system
 
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard *after* the interaction, but we recognize that can be hard.)
