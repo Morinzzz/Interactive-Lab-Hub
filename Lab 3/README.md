@@ -325,16 +325,22 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+At first, the system had trouble with the speech model. The model we started with was not accurate enough to catch what people were saying, and it sometimes stopped listening too early, before the user had finished answering. Switching to a bigger speech model fixed this, and the device could then understand users reliably and follow the conversation. The trade off is that a bigger model takes a little longer to process speech, so for a real product we would need to balance accuracy and speed.
 
 ### What worked well about the controller and what didn't?
-\*\**your answer here*\*\*
+
+The hardest part of the controller was timing and coordination. The wizard had to listen to the user, decide on the right response, and send it at the right moment, all while the conversation was happening. At first this made some responses come too late or feel out of place. After we rehearsed and planned which response to use in each situation, the wizard could respond quickly and the interaction went smoothly.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-\*\**your answer here*\*\*
+
+The biggest lesson is how much timing matters. Even with a person controlling the device, it was hard to respond at the right moment, so an autonomous version needs to be good at deciding on its own when the user has finished talking and when to reply. We also learned that the speech model has to be accurate enough, since a model that mishears people or stops listening early breaks the whole conversation. Finally, the plan we made for the wizard, which listed what to say in each situation, is a good starting point for the autonomous version. Those planned responses can become the rules the device follows. We would also need to add responses for unexpected answers, since people do not always say what we expect.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-\*\**your answer here*\*\*
+
+Every time someone uses DoorBuddy, the system could save a record of the whole conversation. This would include the audio of what the user said, the text it was turned into, what the device said back, and the timing of every turn, such as how long the user took to answer and how long each pause was. In our Wizard of Oz setup, the most useful part would be the wizard's choices. Each time the wizard picked a response to what the user said, that pairing shows what the right reply would have been, which is exactly what a more autonomous version would need to learn from. Over many sessions, the data would also show patterns, like where people usually go and which items they forget most often.
+
+For other sensing modalities, a sensor on the door would tell us exactly when the user leaves or comes back, so each conversation would start and end at the right moment. The camera could capture more than whether someone is there, such as whether they are carrying a bag or a laptop, which could let the device skip questions it already knows the answer to. Time of day and the user's calendar would also help, since a class or meeting on the calendar tells the device what the user probably needs. Since this means recording people in their own home, everyone would need to agree to it and the data should stay on the device.
 
 <details>
   <summary><strong>Submission Cleanup Reminder (Click to Expand)</strong></summary>
