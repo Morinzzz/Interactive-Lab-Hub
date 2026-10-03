@@ -272,9 +272,29 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings.
+
+Feedback from Part 1 was that DoorBuddy was too slow and said more than it needed to. Someone leaving through the door is usually in a hurry, so extra words and long pauses cost them time. We made the device use fewer and simpler words and cut out the unnecessary introductions, so it says the same things in less time. We also shortened the pauses between turns so the conversation moves faster, while still giving the user enough time to finish what they are saying.
+
 2. What are other modes of interaction *beyond speech* that you might also use to clarify how to interact? In particular: how does someone know when the device is listening, and when it is thinking? You have a screen and an LED.
+
+The screen always shows what DoorBuddy is doing, using text and a background color for each state. It shows when the device is listening, when it is processing what the user said, and when it is speaking. This way the user never has to guess whether the device heard them or whether it is their turn to talk.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+The camera sees someone at the door.
+Device: Where are you headed?
+User: Class, I'm presenting.
+Device: Got your laptop?
+User: Oh no, I forgot!
+Device: I'll wait.
+The user comes back.
+Device: Anything to remember next time?
+User: My charger.
+Device: Saved, charger. Good luck!
+
 4. (optional) Integrate [input devices](inputs.md) in the system
+
+We used the webcam in two ways. The camera detects when someone walks up to the door, which starts the conversation without anyone pressing anything. The microphone records what the user says, and the Pi turns the speech into text to decide what to say next.
 
 ## Prototype your system
 
