@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One More Thing Bag: Wizard</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; background: #16181d; color: #e8e8e8; }
+  main { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr); gap: 16px; padding: 16px; }
+  section { background: #20232a; border-radius: 10px; padding: 12px 14px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: #9aa0aa; margin: 4px 0 10px; }
+  #cam { width: 100%; border-radius: 8px; background: #000; aspect-ratio: 4/3; object-fit: cover; }
+  #state { font-size: 28px; font-weight: 700; padding: 10px 14px; border-radius: 8px; text-align: center; }
+  .READY { background: #14285a; } .LISTENING { background: #00823c; }
+  .THINKING { background: #c88200; color: #000; } .SPEAKING { background: #5a1e78; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; align-items: center; }
+  button { background: #2f343e; color: #e8e8e8; border: 1px solid #454b57; border-radius: 6px;
+           padding: 7px 10px; cursor: pointer; font-size: 14px; text-align: left; }
+  button:hover { background: #3a404c; }
+  button.primary { background: #2451b8; border-color: #2451b8; }
+  button.warn { background: #8a2b2b; border-color: #8a2b2b; }
+  button:disabled { opacity: .45; cursor: default; }
+  .group { margin-bottom: 10px; }
+  .group b { display: block; font-size: 12px; color: #9aa0aa; margin-bottom: 4px; }
+  #log { height: 240px; overflow-y: auto; font-size: 14px; }
+  .participant { color: #7ee2a8; font-weight: 600; } .bag { color: #c9a8ff; }
+  .system { color: #8a909b; font-style: italic; font-size: 12px; }
+  #latest { font-size: 20px; color: #7ee2a8; min-height: 28px; margin-bottom: 8px; }
+  textarea { width: 100%; box-sizing: border-box; background: #121419; color: #e8e8e8;
+             border: 1px solid #454b57; border-radius: 6px; padding: 8px; font-size: 15px; }
+  #msg { color: #ff9a9a; min-height: 18px; font-size: 13px; }
+  .hint { font-size: 13px; color: #9aa0aa; }
+  #inview.on { color: #7ee2a8; font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <section>
+      <h2>Camera (not recorded)</h2>
+      <img id="cam" alt="camera preview">
+      <div class="hint" id="camstatus">connecting...</div>
+    </section>
+    <section style="margin-top:16px">
+      <h2>Bag state</h2>
+      <div id="state" class="READY">READY</div>
+      <div class="row" style="margin-top:10px">
+        <button class="primary" onclick="say({id: '{{ opening }}'})">Start: ask where they're going</button>
+        <button onclick="post('/api/listen')">Listen now</button>
+        <button class="warn" title="stops speech, returns to READY and clears the transcript"
+                onclick="post('/api/reset')">Stop / Reset (clears transcript)</button>
+      </div>
+      <div class="row">
+        <label class="hint">End-of-turn silence
+          <input id="silence" type="number" min="0.1" max="3" step="0.1" style="width:60px">
+          s</label>
+        <button onclick="setSilence()">Apply</button>
+        <span class="hint">(used from the next LISTENING)</span>
+      </div>
+      <div class="row">
+        <label class="hint"><input id="autostart" type="checkbox" onchange="setAutoStart()">
+          auto-start when the camera sees someone</label>
+        <span class="hint" id="buttons"></span>
+      </div>
+      <div id="msg"></div>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2>Latest from participant</h2>
+      <div id="latest"></div>
+      <div id="log"></div>
+    </section>
+    <section style="margin-top:16px">
+      <h2>Repair</h2>
+      <div class="row">
+        <button onclick="say({id: 'clarify'})">Clarify: say it again</button>
+        <button onclick="post('/api/repeat')">Repeat my last line</button>
+        <button onclick="say({id: 'no_speech'})">Didn't hear anything</button>
+        <button onclick="say({id: 'cant_see'})">I can't see inside</button>
+      </div>
+      <h2>Custom reply</h2>
+      <textarea id="custom" rows="2" placeholder="Type a reply and press Enter"></textarea>
+      <div class="row" style="margin-top:6px">
+        <label class="hint"><input id="customListen" type="checkbox" checked> listen for an answer afterwards</label>
+        <button class="primary" onclick="sendCustom()">Speak it</button>
+      </div>
+    </section>
+    <section style="margin-top:16px">
+      <h2>Prepared follow-ups</h2>
+      {% for group, lines in groups.items() if group not in ('Start', 'Repair') %}
+      <div class="group"><b>{{ group }}</b>
+        <div class="row">
+          {% for line in lines %}
+          <button title="{{ 'listens after' if line.listen else 'returns to READY' }}"
+                  onclick="say({id: '{{ line.id }}'})">{{ line.text }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+</main>
+<script>
+const msg = document.getElementById('msg');
+let cameraStarted = false, silenceTouched = false;
+
+async function post(url, body) {
+  msg.textContent = '';
+  const r = await fetch(url, {method: 'POST', headers: {'Content-Type': 'application/json'},
+                              body: JSON.stringify(body || {})});
+  if (!r.ok) msg.textContent = (await r.json()).error || r.statusText;
+  refresh();
+}
+function say(body) { post('/api/say', body); }
+function sendCustom() {
+  const box = document.getElementById('custom');
+  if (!box.value.trim()) return;
+  say({text: box.value, listen: document.getElementById('customListen').checked});
+  box.value = '';
+}
+document.getElementById('custom').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCustom(); }
+});
+const silence = document.getElementById('silence');
+silence.addEventListener('input', () => silenceTouched = true);
+function setSilence() {
+  silenceTouched = false;
+  post('/api/settings', {min_silence: parseFloat(silence.value)});
+}
+
+function setAutoStart() {
+  post('/api/settings', {auto_start: document.getElementById('autostart').checked});
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+async function refresh() {
+  const s = await (await fetch('/api/status')).json();
+  const st = document.getElementById('state');
+  st.textContent = s.state + (s.transcribing ? ' (transcribing...)' : '');
+  st.className = s.state;
+  if (!silenceTouched) silence.value = s.min_silence;
+  document.getElementById('autostart').checked = s.auto_start;
+  document.getElementById('autostart').disabled = !s.camera.enabled;
+  document.getElementById('buttons').textContent =
+    s.buttons ? '| PiTFT buttons on: A = Start, B = Stop' : '| PiTFT buttons off (--buttons)';
+
+  const cam = s.camera, cs = document.getElementById('camstatus');
+  if (!cam.enabled) cs.textContent = 'camera disabled (--no-camera)';
+  else if (!cam.ok) cs.textContent = cam.error || 'waiting for camera...';
+  else {
+    if (!cameraStarted) { document.getElementById('cam').src = '/video.mjpg'; cameraStarted = true; }
+    cs.innerHTML = `<span id="inview" class="${cam.in_view ? 'on' : ''}">` +
+      `${cam.in_view ? 'MOTION: someone may be in view' : 'no motion'}</span> ` +
+      `(score ${cam.motion})`;
+  }
+
+  const said = s.history.filter(h => h.who === 'participant');
+  document.getElementById('latest').textContent = said.length ? said[said.length - 1].text : '';
+  const log = document.getElementById('log');
+  const atBottom = log.scrollTop + log.clientHeight >= log.scrollHeight - 10;
+  log.innerHTML = s.history.map(h =>
+    `<div class="${h.who}">${h.time} ${h.who === 'system' ? '' : h.who + ': '}${esc(h.text)}</div>`).join('');
+  if (atBottom) log.scrollTop = log.scrollHeight;
+}
+setInterval(refresh, 400);
+refresh();
+</script>
+</body>
+</html>
