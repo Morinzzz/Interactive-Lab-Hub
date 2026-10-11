@@ -285,6 +285,16 @@ Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/p
 As you develop your Feast Automata concept, consider where the sensor and actuator need to be placed, what parts move, how electronics are housed, and how the overall form and aesthetics support the interaction.
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
+<img width="1441" height="1080" alt="8fec47a9b5a7d8d59156b4df76bd9567" src="https://github.com/user-attachments/assets/27b1c262-698f-4ed6-9e20-a2be82d78f5d" />
+1. When a hand reaches toward the jar, the sensor detects it, and the servo pulls the lid shut.  
+<img width="1441" height="1080" alt="6e70f4ac44328b0f059f93cee0b50351" src="https://github.com/user-attachments/assets/7876a290-4e30-456c-b6e6-64cc167b4c8b" />
+2. When a hand approaches, the servo spins the lid so the opening moves away and blocks access to the candy.  
+<img width="1441" height="1080" alt="3e0262934bf2e381a206f7ce9ac25a0b" src="https://github.com/user-attachments/assets/c17b1605-593d-4531-b92a-f68c4eab59dc" />
+3. When a hand reaches over the tray, the whole jar slides backward, away from the hand.  
+<img width="1441" height="1080" alt="120c8352dd53c518979b1550bba6a94c" src="https://github.com/user-attachments/assets/aa289e31-1a81-4515-a441-bdb394688352" />
+4. When someone lifts the spoon off its stand, the lid shakes a little but does not close.
+<img width="1441" height="1080" alt="e2b2664ab181755ec6742e69b13cd149" src="https://github.com/user-attachments/assets/397cb1b2-241c-46c9-99da-417e91fe9c8f" />
+5. When a hand reaches into the jar, the sensor above detects it, and the servo swings a cardboard paddle across the opening.
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
