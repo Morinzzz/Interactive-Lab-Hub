@@ -297,6 +297,10 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 5. When a hand reaches into the jar, the sensor above detects it, and the servo swings a cardboard paddle across the opening.
 
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
+The biggest uncertainty is false triggering. If the sensor is mounted facing upward at the top of the jar, will walking by with a cup in hand be interpreted as a request for sugar? At what distance should the sensor trigger so that it feels like it’s actually detected me, rather than reacting too late? There’s also the issue of threshold jitter: when a hand hovers at the critical distance, the lid will open and close repeatedly, making it look like it’s broken.  
+uild Sketch 1 in cardboard and use a string to move the lid by hand. Try different lid weights and closing speeds to make it feel shy, not aggressive. This helps us plan the hinge and movement, but we will need to test the servo later.
+Make a hollow cardboard base that fits the Pi and Servo pHAT. Check whether everything fits inside and the jar still sits at a comfortable height.  
+These tests will help us choose the layout.
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
