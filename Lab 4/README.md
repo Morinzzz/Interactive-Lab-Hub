@@ -304,9 +304,13 @@ These tests will help us choose the layout.
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
+We chose Sketch 1, where the jar pulls its lid shut when a hand reaches toward it, because it has a practical use beyond being playful. It can help people cut back on snacking or sugar: the jar closing as you reach for it is a gentle, funny reminder to think twice before grabbing another treat. Because the lid stays shut by default, it also keeps the food covered and fresh and keeps out dust and bugs. The interaction is easy to read, since anyone who reaches for the jar immediately sees it react, so it works without any explanation. This design also lets us directly test the questions we raised, like how far away the sensor should trigger, how to avoid false triggers when someone just walks by, and how fast the lid should close so it feels shy rather than aggressive.
+
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
+
+Link to video: https://drive.google.com/file/d/1i59crSAqmJ7W6VZdGp2xgTt3TzwWQD3O/view?usp=sharing
 
 ---
 
