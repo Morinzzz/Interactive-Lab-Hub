@@ -591,6 +591,10 @@ You treat it like a normal candy jar. You reach in, and the lid comes toward you
 
 https://drive.google.com/file/d/1NhMiPj7ifWOT6mP90GMY5eT6vDo0hR-m/view?usp=drive_link
 
+### Written Reflaction
+
+We learned that sensing, movement, and physical form all depend on each other. The jar only felt shy once the proximity sensor faced the opening and the lid closed at a speed that try to match the hand. Using two different thresholds and requiring the hand to stay for a moment stopped the lid from flapping when someone hovered or just walked past. The fun part was watching the proximity number jump as soon as a hand showed up, and the surprising part was learning that a servo has a limit and we need to be sure to not exceed that angle. The hardest part was telling whether a problem came from the code, a backwards wire, or the servo itself, since they all looked the same from the outside.
+
 ---
 
 ## Deliverables \& Submission for Lab 4
