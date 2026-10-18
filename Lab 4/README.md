@@ -346,6 +346,61 @@ For Part 2, build the Feast Automata interaction you developed in Part D by conn
 
 Iterate on the sensing, movement, and physical form, and document what you discover.
 
+#### Our prototype: Shy Jar
+
+We stuck with Sketch 1. Its a candy jar that gets shy when you reach for it. Hand comes close, the lid swings shut. Hand goes away, the lid opens back up. The point is kinda to make you pause before grabbing more sugar, but it also just looks funny.
+
+**Code:** [`shy_jar.py`](shy_jar.py)
+
+Sensor is the SparkFun VCNL4040 proximity breakout (the one with the red light, I2C `0x60`), plugged into the Qwiic port on the Servo pHAT. Servo is a Miuzei MS18 on channel 0. The pHAT needs its own USB-C power, the Pi USB-C is not enough for the motor. We run it with:
+
+```bash
+python shy_jar.py
+```
+
+Nothing in front of the sensor reads about 0 to 3. If the number stays over 120 for about 0.3 seconds, the lid closes. Under 60, it opens again. The two different numbers are on purpose, so a hand sitting right on the edge doesnt make the lid flap open and closed. The lid starts at -30° (about 0.83 ms) and closes by turning to 135° (1.75 ms), then it comes back to -30°. We stop at 135° instead of 180° so it doesnt hit the 2.0 ms stop and buzz.
+
+**Interaction diagram:**
+
+```
+hand reaches for the candy
+        |
+        v
+VCNL4040 proximity climbs
+        |
+        v
+stays over 120 for 0.3s ?
+        |
+       yes
+        |
+        v
+servo on channel 0 turns the lid from -30° to 135° (0.83 ms -> 1.75 ms), then back
+        |
+        v
+hand leaves, reading drops under 60
+        |
+        v
+lid opens again
+```
+
+**Video of the working prototype (hand in, lid shuts, hand out, lid opens):**
+
+[insert video here]
+
+**Photo of the setup (sensor, servo, jar):**
+
+[insert photo here]
+
+**What we found out**
+
+The sensor really decides the personality of the jar. Proximity is "how close", not "did you touch it", so the lid can react before your fingers are in the candy. We tried an MPR121 first because it was what we had plugged in and the green LED was on, but that board never showed up on the I2C scan, and anyway its a touch sensor. You would already be grabbing the candy before it noticed. Wrong tool for this.
+
+Where the VCNL4040 sits matters a lot. With nothing in front it sits around 0–3, so its pretty quiet. If we point it out into the room, people walking by with a cup could look like a hand. Pointing it at the mouth of the jar, and asking the hand to stay close for 0.3 seconds, filters most of that. The open-threshold being lower than the close-threshold also stopped the jitter we were worried about in part 1, where the lid would chatter if you hovered.
+
+The servo was the annoying part. For a while the arm didnt move at all, or it snapped all the way to one side and stuck, buzzing so loud you couldnt turn it by hand. Some of that was us commanding an angle the library treated as the end of the pulse, so we were driving it into the mechanical stop. The thing that actually fixed the "it wont come back" behavior was the signal wire being backwards. After we flipped that, the arm could swing and return. The first move we liked was only about 45 degrees (1.30 to 1.70 ms) and it took almost 3 seconds, which felt sluggish. What we kept is -30° to 135°, and that close takes 1 second. Enough to read as a no, not a slam. We dont go to 180° because that pulse is the physical stop and the motor buzzes there.
+
+Fun part was the red light on the VCNL4040 and watching the number jump when a hand shows up. Surprising part was a powered servo that buzzes is not a happy servo, its stalled. Challenging part was telling "the code is wrong" apart from "the wire is backwards" apart from "we already stripped the gears".
+
 See encoder_accel_servo_dashboard.py in the Lab 4 folder for an optional example of chaining together three devices.
 
 **`Lab 4/encoder_accel_servo_dashboard.py`**
@@ -508,6 +563,30 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
+
+#### Looks like
+
+Its a small candy jar, not a machine that looks like a machine. Lid is the main moving part, and it should feel light, like it could close on its own. The sensor has to face the opening, otherwise the jar is just a box with a motor in it. Pi and the Servo pHAT can sit next to the jar. Hiding them in a hollow base would look cleaner, but it is not required for the interaction. We are still on a rough build, cardboard plus the real sensor and servo, so the weight is mostly the Pi, not the jar.
+
+**Video or photos for looks like (the jar, the lid, where the sensor sits):**
+
+[insert video or photo here]
+
+#### Works like
+
+The lid actually moves from the sensor, not from us pulling a string like in part 1. `shy_jar.py` reads the VCNL4040, and the servo on channel 0 closes or opens the lid. Close turns from -30° to 135° in about 1 second, then it turns back to -30°. It will not close from a tiny blip, the hand has to stay there. 135° stays off the far stop, so it shouldnt sit there buzzing.
+
+**Video for works like (lid moving on its own, no hand in frame if you can, or at least show the mechanism):**
+
+[insert video here]
+
+#### Acts like
+
+You treat it like a normal candy jar. You reach in, and the lid comes toward you and shuts, so the reaching is what triggers it. If you pull your hand back, it opens, like it changed its mind. If you just walk past, it should ignore you. Thats the whole interaction, nobody has to learn a button.
+
+**Video for acts like (a person reaching, lid shuts, person pulls back, lid opens):**
+
+[insert video here]
 
 ---
 
