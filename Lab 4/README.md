@@ -568,7 +568,7 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 
 Its a small candy jar, not a machine that looks like a machine. Lid is the main moving part, and it should feel light, like it could close on its own. The sensor has to face the opening, otherwise the jar is just a box with a motor in it. Pi and the Servo pHAT can sit next to the jar. Hiding them in a hollow base would look cleaner, but it is not required for the interaction. We are still on a rough build, cardboard plus the real sensor and servo, so the weight is mostly the Pi, not the jar.
 
-**Video or photos for looks like (the jar, the lid, where the sensor sits):**
+**Video or photos for looks like:**
 
 <img width="1008" height="770" alt="image" src="https://github.com/user-attachments/assets/8651d3f2-8ce6-4965-b324-fe20ba375eb3" />
 
@@ -581,17 +581,17 @@ Its a small candy jar, not a machine that looks like a machine. Lid is the main 
 
 The lid actually moves from the sensor, not from us pulling a string like in part 1. `shy_jar.py` reads the VCNL4040, and the servo on channel 0 closes or opens the lid. Close turns from -30° to 135° in about 1 second, then it turns back to -30°. It will not close from a tiny blip, the hand has to stay there. 135° stays off the far stop, so it shouldnt sit there buzzing.
 
-**Video for works like (lid moving on its own, no hand in frame if you can, or at least show the mechanism):**
+**Video for works like:**
 
-[insert video here]
-
+https://drive.google.com/file/d/1RbY5hQXvvrUBMsFUug8W7fgcFz0SU2op/view?usp=sharing  
+https://drive.google.com/file/d/16IZ6mAlN5qPetBv8-k6R9EZXzBusTtHH/view?usp=sharing
 #### Acts like
 
 You treat it like a normal candy jar. You reach in, and the lid comes toward you and shuts, so the reaching is what triggers it. If you pull your hand back, it opens, like it changed its mind. If you just walk past, it should ignore you. Thats the whole interaction, nobody has to learn a button.
 
-**Video for acts like (a person reaching, lid shuts, person pulls back, lid opens):**
+**Video for acts like:**
 
-[insert video here]
+https://drive.google.com/file/d/1NhMiPj7ifWOT6mP90GMY5eT6vDo0hR-m/view?usp=drive_link
 
 ---
 
