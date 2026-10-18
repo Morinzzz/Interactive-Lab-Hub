@@ -383,13 +383,6 @@ hand leaves, reading drops under 60
 lid opens again
 ```
 
-**Video of the working prototype (hand in, lid shuts, hand out, lid opens):**
-
-[insert video here]
-
-**Photo of the setup (sensor, servo, jar):**
-
-[insert photo here]
 
 **What we found out**
 
