@@ -564,6 +564,11 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+### Interaction Diagram
+
+<img width="1105" height="752" alt="image" src="https://github.com/user-attachments/assets/8c10d97c-9d48-491d-a21b-11148b7305b0" />
+
+
 #### Looks like
 
 Its a small candy jar, not a machine that looks like a machine. Lid is the main moving part, and it should feel light, like it could close on its own. The sensor has to face the opening, otherwise the jar is just a box with a motor in it. Pi and the Servo pHAT can sit next to the jar. Hiding them in a hollow base would look cleaner, but it is not required for the interaction. We are still on a rough build, cardboard plus the real sensor and servo, so the weight is mostly the Pi, not the jar.
