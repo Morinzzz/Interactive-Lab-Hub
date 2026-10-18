@@ -570,7 +570,12 @@ Its a small candy jar, not a machine that looks like a machine. Lid is the main 
 
 **Video or photos for looks like (the jar, the lid, where the sensor sits):**
 
-[insert video or photo here]
+<img width="1008" height="770" alt="image" src="https://github.com/user-attachments/assets/8651d3f2-8ce6-4965-b324-fe20ba375eb3" />
+
+<img width="877" height="737" alt="image" src="https://github.com/user-attachments/assets/7f0c66a5-afaf-4636-9c6a-4c916300c6e7" />
+
+<img width="941" height="718" alt="image" src="https://github.com/user-attachments/assets/9db96d4d-a26f-4725-ad70-a72e7bd626ce" />
+
 
 #### Works like
 
