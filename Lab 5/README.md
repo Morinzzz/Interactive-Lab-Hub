@@ -162,7 +162,7 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
 
-
+Sometimes the detector drew a person box on the wall when nobody was there, probably because shadows, uneven lighting and edges like a door frame made shapes that looked like a body outline. It also detected a cardboard box as a person, since the box is roughly the size of an upper body and its brown color is close to skin tones and clothing in low light. Both happen because YOLO does not actually understand what a person is and only matches patterns of shapes, edges and colors it learned from photos. It still detected me when I turned my back, so it relies on body shape more than on seeing a face. Raising the confidence threshold removes some of the false boxes, but it also makes the detector miss real people more often.
 
 ## Part C. 
 ### See more: hands and pose with MediaPipe
