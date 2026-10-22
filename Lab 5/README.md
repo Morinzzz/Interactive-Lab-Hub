@@ -190,6 +190,7 @@ Consider how you might use this position based approach to create an interaction
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
 
+The hand pose demo works by tracking 21 points on the hand and turning their positions into events, like measuring the distance between the thumb and index finger to set the volume. I would use the same approach to control the light level in the room. Widening or closing a pinch would make the lights brighter or dimmer, and a Quiet Coyote gesture would turn them off completely. This fits a night-time system because you could dim the lights from bed as you wind down, without getting up or looking for a switch. The rules are simple to write since they only compare a few landmark positions, but the device would need to ignore hands that are just moving around so the lights don't change by accident.
 
 ## Part D. 
 ### Reason: run Qwen on the Pi with Ollama
