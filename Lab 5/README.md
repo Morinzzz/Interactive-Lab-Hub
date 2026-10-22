@@ -233,7 +233,9 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
 <img width="1716" height="642" alt="406e14515c216829bb5562bc1e6f6d6d" src="https://github.com/user-attachments/assets/d08cb537-bebc-490d-978e-b2601cd78b52" />
 
+I asked both models who the Prime Minister of Thailand is. qwen3.5:0.8b took 25.6 seconds and said Yingluck Shinawatra has served since 2017 and was re-elected in 2024, which is wrong, because she was Prime Minister from 2011 to 2014. qwen3:0.6b answered in 13.4 seconds, about twice as fast, but only gave a short, misspelled name, Prayong, which seems to mean Prayut Chan-o-cha, who left office in 2023. Both models sounded confident while being wrong, so the smaller model is faster but neither one can be trusted with facts it has to remember, which is why the device should give the model the data instead.
 
+The Cornell Tech answer is also wrong. Cornell Tech is a graduate campus on Roosevelt Island, not an online learning platform. That's another good example if you want to point out errors in your three Q&As.
 
 ## Part E. 
 ### Connect: from YOLO readings to Qwen reasoning
