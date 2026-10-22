@@ -257,6 +257,7 @@ asking Qwen...
 Qwen (18.4 s):
 One person came in from the right, moved close to the camera, and left after about half a minute. ...
 ```
+<img width="996" height="882" alt="image" src="https://github.com/user-attachments/assets/ebec9f7b-4702-43d1-bb5f-2ea26714b4ed" />
 
 ---
 
