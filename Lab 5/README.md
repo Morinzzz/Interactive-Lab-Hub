@@ -161,6 +161,11 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 ```
 
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
+https://drive.google.com/file/d/19KMTYGMlTYd4geVwvQzYywyae3sGzlaQ/view?usp=sharing  
+https://drive.google.com/file/d/11gCTF8ug3CqiXqBZVeoKJnOokoHVyeOp/view?usp=sharing  
+https://drive.google.com/file/d/1fN1iEMC3c4UQRBo2Ca2w-TZVSluA_dfG/view?usp=sharing
+<img width="1179" height="582" alt="image" src="https://github.com/user-attachments/assets/0624192c-c715-4028-b09f-d022ff473a49" />
+<img width="1188" height="576" alt="image" src="https://github.com/user-attachments/assets/341ec812-9f40-42bc-9722-1639724ab07d" />
 
 Sometimes the detector drew a person box on the wall when nobody was there, probably because shadows, uneven lighting and edges like a door frame made shapes that looked like a body outline. It also detected a cardboard box as a person, since the box is roughly the size of an upper body and its brown color is close to skin tones and clothing in low light. Both happen because YOLO does not actually understand what a person is and only matches patterns of shapes, edges and colors it learned from photos. It still detected me when I turned my back, so it relies on body shape more than on seeing a face. Raising the confidence threshold removes some of the false boxes, but it also makes the detector miss real people more often.
 
@@ -189,6 +194,7 @@ Try the two main features of this script: 1) pinching for percentage control (th
 Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
+https://drive.google.com/file/d/1k_O0kMp0HoOpa-b1eOVRvFzQyKQat0a6/view?usp=sharing  
 
 The hand pose demo works by tracking 21 points on the hand and turning their positions into events, like measuring the distance between the thumb and index finger to set the volume. I would use the same approach to control the light level in the room. Widening or closing a pinch would make the lights brighter or dimmer, and a Quiet Coyote gesture would turn them off completely. This fits a night-time system because you could dim the lights from bed as you wind down, without getting up or looking for a switch. The rules are simple to write since they only compare a few landmark positions, but the device would need to ignore hands that are just moving around so the lights don't change by accident.
 
@@ -258,6 +264,7 @@ asking Qwen...
 Qwen (18.4 s):
 One person came in from the right, moved close to the camera, and left after about half a minute. ...
 ```
+https://drive.google.com/file/d/1vTxuZXGkDrBkJOGJ7zRQg8mS8VnjQo5J/view?usp=sharing  
 <img width="996" height="882" alt="image" src="https://github.com/user-attachments/assets/ebec9f7b-4702-43d1-bb5f-2ea26714b4ed" />
 
 ---
