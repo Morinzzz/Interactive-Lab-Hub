@@ -222,10 +222,8 @@ Things in the [Ollama API](https://github.com/ollama/ollama/blob/main/docs/api.m
 A 0.8B model is slow and sometimes wrong. It will invent events that are not in the data and agree with a wrong premise. Give it the data, keep its job narrow, and decide what the device does when the model is unsure.
 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
+<img width="1716" height="642" alt="406e14515c216829bb5562bc1e6f6d6d" src="https://github.com/user-attachments/assets/d08cb537-bebc-490d-978e-b2601cd78b52" />
 
-<details>
-  Q&A here
-</details>
 
 
 ## Part E. 
