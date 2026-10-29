@@ -305,10 +305,13 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
 Idea: Desk Watch. The camera sits on the desk. It looks at the desk and the chair. It does not look at the bed. In the morning it tells us one thing. Did anybody come back to the desk.
+<img width="1280" height="960" alt="84b5a4617c35d276af78030c99f831bd_720" src="https://github.com/user-attachments/assets/8d3dd4d1-559b-4ad4-8ee5-9389771738f9" />
 
 Panel 1, before bed. I stand at the desk. I do Quiet Coyote at the camera. Same gesture as Part C. The LED dims. A line shows up: "Watching the desk tonight." This sets the morning question. Did anyone come to the desk. It takes about 30 seconds. Then I leave.
+<img width="1280" height="960" alt="b8dc77437cd4fbab70e5953dd56f8517_720" src="https://github.com/user-attachments/assets/0cf55ab0-4bed-4d01-9cbb-a89a8330d886" />
 
 Panel 2, while asleep. The Pi looks every 10 seconds. It only cares about people. It writes a new line only when the reading changes. Person, or nobody. If it sees a person, it saves one photo. Every 10 minutes it writes an alive line, so a quiet night is not a crash. Qwen does not run at night. It waits for morning.
+<img width="1280" height="960" alt="e4db5819af4879a81b443b1648515101_720" src="https://github.com/user-attachments/assets/a6271164-aeaf-4987-93cc-4902bbba7c43" />
 
 Panel 3, when awake. I run the morning script. If the log is only nobody, the device says "Quiet night. Nobody came to the desk." It does not ask Qwen. If someone was there, Piper reads one short line. The time, and if they were close. One fact. Not a long story.
 
