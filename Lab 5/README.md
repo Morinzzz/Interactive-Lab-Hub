@@ -7,7 +7,7 @@
 Feiyu Zhou (fz283)
 Sirapop Umnakkittikul (su97)
 
-**Project name:**
+**Project name:** Desk Watch
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
@@ -30,7 +30,9 @@ This lab will help you think through the design of observant systems, particular
 **New this year: the AI runs on the Pi.** Your Pi 5 can run an object detector ([YOLO](https://docs.ultralytics.com/)) and a small language model ([Qwen](https://ollama.com/library/qwen3.5) through [Ollama](https://ollama.com)) completely offline. In Part 1 you get both running and connect them: YOLO *sees*, Qwen *reasons* about what was seen. These models are slow, but they have all night. In Part 2 you use them to design a **night-time interaction**: what you tell the device before bed, what it does while you sleep, and what it shows you when you wake up.
 
 **Please indicate anyone that helped with this Lab here.**
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design.
+
+Part 2 draft text was written with help from Cursor. We still need to change it after real feedback, the night run, and our own edits. 
 
 ## Overview
 
@@ -302,15 +304,38 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
 
+Idea: Desk Watch. The camera sits on the desk. It looks at the desk and the chair. It does not look at the bed. In the morning it tells us one thing. Did anybody come back to the desk.
+
+Panel 1, before bed. I stand at the desk. I do Quiet Coyote at the camera. Same gesture as Part C. The LED dims. A line shows up: "Watching the desk tonight." This sets the morning question. Did anyone come to the desk. It takes about 30 seconds. Then I leave.
+
+Panel 2, while asleep. The Pi looks every 10 seconds. It only cares about people. It writes a new line only when the reading changes. Person, or nobody. If it sees a person, it saves one photo. Every 10 minutes it writes an alive line, so a quiet night is not a crash. Qwen does not run at night. It waits for morning.
+
+Panel 3, when awake. I run the morning script. If the log is only nobody, the device says "Quiet night. Nobody came to the desk." It does not ask Qwen. If someone was there, Piper reads one short line. The time, and if they were close. One fact. Not a long story.
+
+Verplank, in words. A sketch photo still needs to go here.
+The person does Quiet Coyote, then goes to sleep. The device senses with the webcam and YOLO. At night the LED is dim. In the morning the device speaks one sentence.
+
 ## Prep for Part 2
 
 1. Look at and give feedback on the Part F storyboards.
    **Put the feedback for your ideas here.**
+
+Class feedback is not in yet. Paste what people actually said after we show them the storyboard. Do not leave this note.
 2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
 3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
 4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
 
 \*\*\***Post your revised storyboard here.**\*\*\*
+
+This revision comes from our own Part B and Part E tests. We will change it again after classmate feedback.
+
+The camera points at the desk only. In Part B, YOLO drew a person on the wall. It also called a cardboard box a person. So the background has to be plain. No big box. No poster with a person on it. If fake boxes come back, we raise the confidence.
+
+The morning question is only "did a person show up." So `interpret()` does not need left, center, and right. It should say `nobody`, or `person, close`, or `person, far`. Close means the box is tall. Qwen never sees the photo. It only sees these words.
+
+A back view still counts as a person. Part B showed that. That is fine. We are not looking for a face.
+
+We look every 10 seconds. Not a video stream. After the demo we delete the photos in `snaps/`. Roommates have to say yes before the real night.
 
 ## Part G. 
 ### Design the interaction before
@@ -318,6 +343,10 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 The hand-off: the person tells the device what to watch tonight, and the device acknowledges it. Keep it to a thirty-second ritual. A button or a touch (Lab 4), a spoken sentence (Lab 3), a wave or a Quiet Coyote at the camera (Part C). The acknowledgement can be a line on the display, a tone, or an LED that dims rather than lights up. At its simplest, the hand-off just sets the question that the morning will answer.
 
 \*\*\***Describe the interaction before.**\*\*\*
+
+Before bed I walk to the desk. I face the camera. I do Quiet Coyote, the same gesture as Part C. Index finger and pinky stay up. Middle finger and ring finger fold together. The thumb sits near the ring finger. The Pi sees the gesture and starts the night log. The LED goes dim, not bright. The screen says "Watching the desk. Morning question: did anyone come back?" Then I go to bed.
+
+If the room is too dark and the hand pose fails, I press the Lab 4 button once. Same result. The hand-off only sets that one question. I do not have to talk to it. The whole ritual is about 30 seconds.
 
 ## Part H. 
 ### Incorporate the observant system
@@ -333,6 +362,8 @@ Fake a night first: run it for thirty seconds while you walk around, stop it, an
 
 \*\*\***Screenshots or videos of the running system.**\*\*\*
 
+Screenshot of the fake night, and the real `night_log.jsonl`, go here after we run them on the Pi.
+
 ## Part I. 
 ### Design the interaction after
 
@@ -344,6 +375,8 @@ The reveal. The night produced a log; the morning turns it into something a half
 
 Make it yours: show the report on the Mini PiTFT, read it aloud with Piper from Lab 3, plot the night as a timeline, or ask for JSON (`--json`, Part D) and move a servo. Whatever you pick, make sure it is honest about a night in which nothing happened.
 
+Morning plan. We keep `morning.py` as the check. Then Piper reads the report out loud, from Lab 3. If nobody was at the desk, it says "Quiet night. Nobody came to the desk." and it does not call Qwen. If someone was there, Qwen gets the log and Piper says one short line. The time, and close or far. Nothing that is not in the log.
+
 ## Final documentation
 
 Document all the prototypes and iterations you have designed and worked on. The deliverables for this lab are writings, sketches, photos, and videos that show what your system:
@@ -353,6 +386,14 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * "Acts like": how a person hands the night over and what they get back.
 
 \*\*\***Include a short video of the whole system**\*\*\*
+
+Video link goes here after we film the real run.
+
+Looks like. The Pi and the webcam sit on the desk, facing the chair. Not the bed. At bedtime the LED is dim and the screen shows one line. In the morning the same screen shows one sentence, and the speaker says it.
+
+Works like. YOLO looks at a frame. `interpret()` turns the boxes into `nobody` or `person, close` or `person, far`. `overnight.py` writes that to `night_log.jsonl` only when it changes. In the morning `morning.py` reads the log. A quiet night stops there. A night with a person goes to Qwen, and Qwen only gets the words in the log. Real log link goes here after the night run.
+
+Acts like. At night I do Quiet Coyote, or I press the button if the room is dark. The device dims and takes the question. In the morning I get one sentence back. Either nobody came, or someone was there at a certain time.
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
