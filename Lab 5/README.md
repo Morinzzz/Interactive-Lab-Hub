@@ -314,6 +314,7 @@ Panel 2, while asleep. The Pi looks every 10 seconds. It only cares about people
 <img width="1280" height="960" alt="e4db5819af4879a81b443b1648515101_720" src="https://github.com/user-attachments/assets/a6271164-aeaf-4987-93cc-4902bbba7c43" />
 
 Panel 3, when awake. I run the morning script. If the log is only nobody, the device says "Quiet night. Nobody came to the desk." It does not ask Qwen. If someone was there, Piper reads one short line. The time, and if they were close. One fact. Not a long story.
+<img width="1280" height="960" alt="03527975c2bf937324fb98e44199d32c_720" src="https://github.com/user-attachments/assets/1a28e67d-4019-4163-9e0b-7a5f83cd3aa6" />
 
 Verplank, in words. A sketch photo still needs to go here.
 The person does Quiet Coyote, then goes to sleep. The device senses with the webcam and YOLO. At night the LED is dim. In the morning the device speaks one sentence.
