@@ -324,10 +324,7 @@ The person does Quiet Coyote, then goes to sleep. The device senses with the web
 1. Look at and give feedback on the Part F storyboards.
    **Put the feedback for your ideas here.**
 
-Class feedback is not in yet. Paste what people actually said after we show them the storyboard. Do not leave this note.
-2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
-3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
-4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
+The idea is clear and I like that it tells you when nothing happened. But the camera can't see well in the dark, so it might miss someone who doesn't turn on a light. It might also be useful to include why you want to know if someone came to the desk. Is it to catch yourself staying up late, or a roommate using your desk?
 
 \*\*\***Post your revised storyboard here.**\*\*\*
 
