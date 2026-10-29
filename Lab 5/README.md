@@ -240,7 +240,7 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 
 I asked both models who the Prime Minister of Thailand is. qwen3.5:0.8b took 25.6 seconds and said Yingluck Shinawatra has served since 2017 and was re-elected in 2024, which is wrong, because she was Prime Minister from 2011 to 2014. qwen3:0.6b answered in 13.4 seconds, about twice as fast, but only gave a short, misspelled name, Prayong, which seems to mean Prayut Chan-o-cha, who left office in 2023. Both models sounded confident while being wrong, so the smaller model is faster but neither one can be trusted with facts it has to remember, which is why the device should give the model the data instead.
 
-The Cornell Tech answer is also wrong. Cornell Tech is a graduate campus on Roosevelt Island, not an online learning platform. That's another good example if you want to point out errors in your three Q&As.
+Qwen also said Cornell Tech is an online learning platform, when it is actually a graduate campus on Roosevelt Island.
 
 ## Part E. 
 ### Connect: from YOLO readings to Qwen reasoning
