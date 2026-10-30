@@ -326,13 +326,8 @@ The person does Quiet Coyote, then goes to sleep. The device senses with the web
 The idea is clear and I like that it tells you when nothing happened. But the camera can't see well in the dark, so it might miss someone who doesn't turn on a light. It might also be useful to include why you want to know if someone came to the desk. Is it to catch yourself staying up late, or a roommate using your desk?
 
 \*\*\***Post your revised storyboard here.**\*\*\*
+<img width="1280" height="960" alt="78061ce968af088e5750ed6a2495c563_720" src="https://github.com/user-attachments/assets/8a9400e4-692c-4aec-8712-860fd7624d59" />
 
-
-The camera points at the desk only. In Part B, YOLO drew a person on the wall. It also called a cardboard box a person. So the background has to be plain. No big box. No poster with a person on it. If fake boxes come back, we raise the confidence.
-
-The morning question is only "did a person show up." So `interpret()` does not need left, center, and right. It should say `nobody`, or `person, close`, or `person, far`. Close means the box is tall. Qwen never sees the photo. It only sees these words.
-
-A back view still counts as a person. Part B showed that. That is fine. We are not looking for a face.
 
 
 ## Part G. 
@@ -389,7 +384,6 @@ The JSON file of the full night log is full_night.jsonl.
 
 ## Final documentation
 
-Document all the prototypes and iterations you have designed and worked on. The deliverables for this lab are writings, sketches, photos, and videos that show what your system:
 
 * "Looks like": how the device sits in the room at night, and what it looks like at bedtime and in the morning.
 * "Works like": the pipeline from detector to interpreter to log to reasoner, with a real night's data.
