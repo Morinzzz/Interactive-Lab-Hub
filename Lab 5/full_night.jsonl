@@ -1,0 +1,51 @@
+{"t": "2026-10-30T02:31:06", "event": "night started", "by": "quiet coyote"}
+{"t": "2026-10-30T02:31:07", "reading": "1 person(s) at center/close"}
+{"t": "2026-10-30T02:31:07", "alive": true}
+{"t": "2026-10-30T02:31:27", "reading": "1 person(s) at left/far"}
+{"t": "2026-10-30T02:31:48", "reading": "nobody"}
+{"t": "2026-10-30T02:41:09", "alive": true}
+{"t": "2026-10-30T02:51:11", "alive": true}
+{"t": "2026-10-30T02:52:53", "reading": "1 person(s) at right/far"}
+{"t": "2026-10-30T02:53:03", "reading": "1 person(s) at center/close"}
+{"t": "2026-10-30T02:53:33", "reading": "nobody"}
+{"t": "2026-10-30T03:01:13", "alive": true}
+{"t": "2026-10-30T03:11:14", "alive": true}
+{"t": "2026-10-30T03:21:15", "alive": true}
+{"t": "2026-10-30T03:31:17", "alive": true}
+{"t": "2026-10-30T03:41:19", "alive": true}
+{"t": "2026-10-30T03:51:20", "alive": true}
+{"t": "2026-10-30T04:01:22", "alive": true}
+{"t": "2026-10-30T04:11:23", "alive": true}
+{"t": "2026-10-30T04:21:25", "alive": true}
+{"t": "2026-10-30T04:31:27", "alive": true}
+{"t": "2026-10-30T04:41:28", "alive": true}
+{"t": "2026-10-30T04:51:29", "alive": true}
+{"t": "2026-10-30T05:01:30", "alive": true}
+{"t": "2026-10-30T05:11:31", "alive": true}
+{"t": "2026-10-30T05:21:32", "alive": true}
+{"t": "2026-10-30T05:26:27", "reading": "1 person(s) at left/far"}
+{"t": "2026-10-30T05:26:37", "reading": "nobody"}
+{"t": "2026-10-30T05:31:33", "alive": true}
+{"t": "2026-10-30T05:41:34", "alive": true}
+{"t": "2026-10-30T05:51:35", "alive": true}
+{"t": "2026-10-30T06:01:36", "alive": true}
+{"t": "2026-10-30T06:11:38", "alive": true}
+{"t": "2026-10-30T06:21:40", "alive": true}
+{"t": "2026-10-30T06:31:41", "alive": true}
+{"t": "2026-10-30T06:41:42", "alive": true}
+{"t": "2026-10-30T06:51:43", "alive": true}
+{"t": "2026-10-30T07:01:44", "alive": true}
+{"t": "2026-10-30T07:11:46", "alive": true}
+{"t": "2026-10-30T07:21:48", "alive": true}
+{"t": "2026-10-30T07:31:50", "alive": true}
+{"t": "2026-10-30T07:41:51", "alive": true}
+{"t": "2026-10-30T07:51:52", "alive": true}
+{"t": "2026-10-30T08:01:54", "alive": true}
+{"t": "2026-10-30T08:09:53", "reading": "1 person(s) at right/far"}
+{"t": "2026-10-30T08:10:23", "reading": "nobody"}
+{"t": "2026-10-30T08:11:55", "alive": true}
+{"t": "2026-10-30T08:21:57", "alive": true}
+{"t": "2026-10-30T08:31:58", "alive": true}
+{"t": "2026-10-30T08:41:50", "reading": "1 person(s) at center/close"}
+{"t": "2026-10-30T08:42:00", "alive": true}
+{"t": "2026-10-30T08:43:12", "event": "stopped", "by": "pkill"}
