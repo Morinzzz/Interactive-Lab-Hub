@@ -363,7 +363,14 @@ Fake a night first: run it for thirty seconds while you walk around, stop it, an
 
 \*\*\***Screenshots or videos of the running system.**\*\*\*
 
-Screenshot of the fake night, and the real `night_log.jsonl`, go here after we run them on the Pi.
+<img width="940" height="698" alt="image" src="https://github.com/user-attachments/assets/7a2f717f-e8e0-4b80-8861-1e3ed1b1cb13" />
+
+<img width="939" height="699" alt="image" src="https://github.com/user-attachments/assets/b720cbe9-5e8d-47a7-a091-2052cd2cc2a5" />
+
+<img width="949" height="709" alt="image" src="https://github.com/user-attachments/assets/02c05cbc-8711-4389-9e99-b47855dbc85e" />
+
+<img width="1388" height="998" alt="image" src="https://github.com/user-attachments/assets/7a4c044b-0d20-4ac1-b10b-829ebb61804b" />
+
 
 ## Part I. 
 ### Design the interaction after
