@@ -316,7 +316,6 @@ Panel 2, while asleep. The Pi looks every 10 seconds. It only cares about people
 Panel 3, when awake. I run the morning script. If the log is only nobody, the device says "Quiet night. Nobody came to the desk." It does not ask Qwen. If someone was there, Piper reads one short line. The time, and if they were close. One fact. Not a long story.
 <img width="1280" height="960" alt="03527975c2bf937324fb98e44199d32c_720" src="https://github.com/user-attachments/assets/1a28e67d-4019-4163-9e0b-7a5f83cd3aa6" />
 
-Verplank, in words. A sketch photo still needs to go here.
 The person does Quiet Coyote, then goes to sleep. The device senses with the webcam and YOLO. At night the LED is dim. In the morning the device speaks one sentence.
 
 ## Prep for Part 2
@@ -328,7 +327,6 @@ The idea is clear and I like that it tells you when nothing happened. But the ca
 
 \*\*\***Post your revised storyboard here.**\*\*\*
 
-This revision comes from our own Part B and Part E tests. We will change it again after classmate feedback.
 
 The camera points at the desk only. In Part B, YOLO drew a person on the wall. It also called a cardboard box a person. So the background has to be plain. No big box. No poster with a person on it. If fake boxes come back, we raise the confidence.
 
@@ -336,7 +334,6 @@ The morning question is only "did a person show up." So `interpret()` does not n
 
 A back view still counts as a person. Part B showed that. That is fine. We are not looking for a face.
 
-We look every 10 seconds. Not a video stream. After the demo we delete the photos in `snaps/`. Roommates have to say yes before the real night.
 
 ## Part G. 
 ### Design the interaction before
