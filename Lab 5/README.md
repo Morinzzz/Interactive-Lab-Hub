@@ -387,9 +387,7 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * "Acts like": how a person hands the night over and what they get back.
 
 \*\*\***Include a short video of the whole system**\*\*\*
-
-Video link goes here after we film the real run.
-
+https://drive.google.com/file/d/1A61GbZFxwjUhj2yQwvzyDYzJhsWYdOhK/view?usp=sharing
 Looks like. The Pi and the webcam sit on the desk, facing the chair. Not the bed. At bedtime the LED is dim and the screen shows one line. In the morning the same screen shows one sentence, and the speaker says it.
 
 Works like. YOLO looks at a frame. `interpret()` turns the boxes into `nobody` or `person, close` or `person, far`. `overnight.py` writes that to `night_log.jsonl` only when it changes. In the morning `morning.py` reads the log. A quiet night stops there. A night with a person goes to Qwen, and Qwen only gets the words in the log. Real log link goes here after the night run.
