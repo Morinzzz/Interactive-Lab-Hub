@@ -380,7 +380,12 @@ The reveal. The night produced a log; the morning turns it into something a half
 
 Make it yours: show the report on the Mini PiTFT, read it aloud with Piper from Lab 3, plot the night as a timeline, or ask for JSON (`--json`, Part D) and move a servo. Whatever you pick, make sure it is honest about a night in which nothing happened.
 
-Morning plan. We keep `morning.py` as the check. Then Piper reads the report out loud, from Lab 3. If nobody was at the desk, it says "Quiet night. Nobody came to the desk." and it does not call Qwen. If someone was there, Qwen gets the log and Piper says one short line. The time, and close or far. Nothing that is not in the log.
+<img width="1500" height="345" alt="image" src="https://github.com/user-attachments/assets/a6a8cf74-4188-440e-a591-6b0fcbfd92d3" />
+
+<img width="682" height="660" alt="image" src="https://github.com/user-attachments/assets/e2713626-93c4-43e9-acc8-3724e4b41f6e" />
+
+The JSON file of the full night log is full_night.jsonl.
+
 
 ## Final documentation
 
