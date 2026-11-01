@@ -2,7 +2,7 @@
 
 **Team:**
 
-**Members:** Full Name (netid, github-handle), ...
+**Members:**
 
 Feiyu Zhou (fz283)
 Sirapop Umnakkittikul (su97)
