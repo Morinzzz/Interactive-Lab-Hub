@@ -32,7 +32,7 @@ This lab will help you think through the design of observant systems, particular
 **Please indicate anyone that helped with this Lab here.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design.
 
-Part 2 draft text was written with help from Cursor. We still need to change it after real feedback, the night run, and our own edits. 
+Feiyu Zhou (fz283) and Sirapop Umnakkittikul (su97)
 
 ## Overview
 
