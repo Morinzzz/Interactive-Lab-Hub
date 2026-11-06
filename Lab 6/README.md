@@ -89,11 +89,11 @@ Players must coordinate their actions to follow recipes, control the cooking pro
 
 ### Pixel Grid Screenshot
 
-![Collaborative Pixel Grid](pixel_grid.jpg)
+![Collaborative Pixel Grid](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/pixel_grid.jpg)
 
 ### Raspberry Pi Setup
 
-![Raspberry Pi with APDS-9960 Sensor](pi_setup.jpg)
+![Raspberry Pi with APDS-9960 Sensor](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/pi_setup.jpg)
 
 ---
 
@@ -119,7 +119,7 @@ Through this interaction, we hope to create a simple and playful experience that
 **Demo Video:** [Watch our project demo](https://drive.google.com/file/d/1tm64V-Qqm8RqUIZHdSv-qdsiuE-q7WkZ/view?usp=sharing)
 
 
-![Architecture Diagram](AD.png)
+![Architecture Diagram](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/AD.png)
 
 Our system consists of three Raspberry Pis, each connected to an APDS-9960 color sensor, an MQTT broker, and a shared display.
 
@@ -136,7 +136,7 @@ Our system consists of three Raspberry Pis, each connected to an APDS-9960 color
 
 #### Photos of each Pi + sensors
 
-![Pi Photo](3.1.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.1.png)
 
 We used three Raspberry Pis as players:
 
@@ -158,7 +158,7 @@ Each player has its own topic:
 
 Each Pi sends about 10 messages a second. Every message is a small JSON object with the player number, the color, whether something is held over the sensor, the proximity reading, and the time it was sent. For example:
 
-![Pi Photo](3.2.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.2.png)
 
 The shared screen listens to all three at once with the wildcard topic IDD/morinmig/colormix/+ 
 
@@ -168,35 +168,35 @@ The project has two files. color_mix_pi.py runs on each player's Pi, and color_m
 
 On each Pi (use 2 and 3 on the other Pis):
 
-![Pi Photo](3.3.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.3.png)
 
 On the laptop, then open http://localhost:8091 in a browser:
 
-![Pi Photo](3.4.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.4.png)
 
 Reading the sensor. Each Pi reads the color and how close something is. A player only counts as holding a color when the proximity is 40 or more. With nothing in front, the sensor still picks up a pinkish color from the room light, so without this check every player would always be counted.
 
-![Pi Photo](3.5.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.5.png)
 
 Cleaning up the color. The sensor reads blue too weakly, so we boost it, then scale the color so the strongest channel is 255. This keeps the hue but not the brightness. We also blend each new reading with the last one so the screen does not flicker.
 
-![Pi Photo](3.6.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.6.png)
 
 Publishing. Each Pi sends its color to its own topic 10 times a second.
 
-![Pi Photo](3.7.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.7.png)
 
 Receiving. The shared screen subscribes to all three topics with one wildcard. It saves the latest message from each player and when it arrives.
 
-![Pi Photo](3.8.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.8.png)
 
 Mixing. A player is offline if nothing has arrived from them for 3 seconds. The mixed color is the average of the players who are holding something up, like shining three colored lights on the same spot.
 
-![Pi Photo](3.9.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/3.9.png)
 
 Showing it. The web page asks for the latest colors about 7 times a second and paints the four circles.
 
-![Pi Photo](4.10.png)
+![Pi Photo](https://raw.githubusercontent.com/WenqingPan-Lucy/Interactive-Lab-Hub/WenqingPan_Lab/Lab%206/4.10.png)
 
 Full codes are in color_mix_display.py and color_mix_pi.py
 
